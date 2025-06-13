@@ -71,6 +71,11 @@ public class WaterRandomization : MonoBehaviour
     }
     void RandomScatteringColorHSV(){
         int Hue = Random.Range(140, 250) + scatterColorBias;
+        if (Hue > 240) {
+            Hue = 240;
+        } else if (Hue < 45) {
+            Hue = 45;
+        }
         int Saturation = Random.Range(50, 100);
         int Value = Random.Range(50, 100);
         waterScript.scatteringColor = Color.HSVToRGB(

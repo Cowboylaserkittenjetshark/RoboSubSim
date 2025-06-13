@@ -282,7 +282,7 @@ public class CommandPacket{
                         sceneManagement.allCommandsReceived.Add(command.Key);
                         sceneManagement.sceneToggles = body[9];
                         sceneManagement.scatterColorBias = System.BitConverter.ToInt16(body, 10);
-                        //Debug.Log("bias: " + sceneManagement.scatterColorBias);
+                        Debug.Log("bias: " + sceneManagement.scatterColorBias);
                         sceneManagement.sceneTogglesRefresh = true;
                         process_code = PROCESS_CODES.UNITY_REPLY;
                         break;
