@@ -25,7 +25,7 @@ public class WaterRandomization : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            RandomScatteringColor();
+            RandomScatteringColorHSV();
             RandomVisibility();
         }
         //count += 1;
@@ -70,14 +70,9 @@ public class WaterRandomization : MonoBehaviour
         waterScript.scatteringColor *= brightness;
     }
     void RandomScatteringColorHSV(){
-        int Hue = Random.Range(140, 250) + scatterColorBias;
-        if (Hue > 240) {
-            Hue = 240;
-        } else if (Hue < 45) {
-            Hue = 45;
-        }
-        int Saturation = Random.Range(50, 100);
-        int Value = Random.Range(50, 100);
+        int Hue = Random.Range(45, 200);
+        int Saturation = Random.Range(50, 75);
+        int Value = Random.Range(50, 175);
         waterScript.scatteringColor = Color.HSVToRGB(
             (Hue/360.0f) % 1.0f,
             (Saturation/100.0f) % 1.0f,
