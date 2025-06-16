@@ -13,11 +13,20 @@ MonoBehaviour:
   m_Name: boxes_id_label_config
   m_EditorClassIdentifier: 
   m_LabelEntries:
-  - label: slalommiddle
+  - label: gate
     id: 0
     hierarchyRelation: 0
-  - label: slalomside
+  - label: gatepole
     id: 1
+    hierarchyRelation: 0
+  - label: gatered
+    id: 2
+    hierarchyRelation: 0
+  - label: gateblue
+    id: 3
+    hierarchyRelation: 0
+  - label: gatemiddle
+    id: 4
     hierarchyRelation: 0
   autoAssignIds: 1
   startingLabelId: 0
